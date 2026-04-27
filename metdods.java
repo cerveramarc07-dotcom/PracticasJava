@@ -1,5 +1,6 @@
 package Principio;
 import java.util.Scanner;
+
 public class metdods {
 
 	public static void main(String[] args) {
@@ -20,7 +21,8 @@ public class metdods {
 		System.out.println("La llamada al metodo resta da como resultado " + rest);
 		*/
 		
-		parimpar(num1, num2);
+		buscarPrimo(num1);
+		//parimpar(num1, num2);
 	}
 	
 	public static void mundo() {
@@ -72,6 +74,41 @@ public class metdods {
 				System.out.println(a + " es impar y " + b + " es par");
 			}
 		}
+		
+	
 	}
 	
+	/*	El Buscador de Primos (Nivel Pro)
+	Enunciado: Pide un número al usuario y determina si es un número primo.
+
+	Un número es primo si solo es divisible por 1 y por sí mismo.
+
+	Lógica: Debes usar un ciclo que pruebe a dividir el número desde 2 hasta la mitad del número. Si encuentras un divisor (módulo == 0), ya no es primo.
+
+	Foco: Condicionales anidados dentro de un ciclo.*/
+	public static void buscarPrimo(int a) {
+		int numero = a;
+		boolean esPrimo = true;
+
+		if (numero <= 1) {
+		    System.out.println("El número " + numero + " no es primo");
+		    return;
+		}
+
+		for (int i = 2; i <= Math.sqrt(numero); i++) {
+		    if (numero % i == 0) {
+		        esPrimo = false;
+		        break;
+		    }
+		}
+
+		if (esPrimo) {
+		    System.out.println("El número " + numero + " es primo");
+		} else {
+		    System.out.println("El número " + numero + " no es primo");
+		}
+	
+		
+	}
 }
+
