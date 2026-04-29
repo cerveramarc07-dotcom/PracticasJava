@@ -70,7 +70,6 @@ public class ColocarX {
 	            
 	            System.out.println();
 	        }   
-	   
 	}
 	
 	public static void recorrerArray(int[] array) {
